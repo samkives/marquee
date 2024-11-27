@@ -1,0 +1,109 @@
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #c8ff00;
+}
+
+.controls {
+    margin: 20px;
+}
+
+table {
+    width: 75%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td {
+    height: 80px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 5px;
+}
+
+.ribbon {
+    background: #ff61e7;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    white-space: nowrap;
+    display: inline-block;
+    
+}
+
+.bouncing-text {
+    background: #ed68c9;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation: bounce-horizontal 2s infinite, text-color-change 2s infinite;
+    
+}
+
+.bouncing-vertical {
+    background: #ff61ca;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation: bounce-vertical 2s infinite;
+}
+
+.color-box {
+    height: 100px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: bounce-horizontal 2s infinite, box-color-change 2s infinite;
+}
+
+
+@keyframes bounce-horizontal {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(100%); }
+}
+
+@keyframes bounce-vertical {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+}
+
+@keyframes box-color-change {
+    0% { background-color: #e600ff; }
+    50% { background-color: #ff0088; }
+    100% { background-color: #e600ff; }
+}
+
+@keyframes bounce-text {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-30px); 
+    }
+}
+
+@keyframes text-color-change {
+    0%, 100% {
+        color: #6c5906; 
+    }
+    50% {
+        color: rgb(255, 0, 0); 
+    }
+
+}
+
+
+

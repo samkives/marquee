@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOKET MARQUEES NI SAM</title>
+    <link rel="stylesheet" href="marquee.css">
+</head>
+<body>
+    <div class="controls">
+        <button onclick="pauseAnimations()">pause mo teh!</button>
+        <button onclick="playAnimations()">go go go!</button>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <marquee class="ribbon" behavior="scroll" direction="right" id="text1">Hello, Sir Andaya! </marquee>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <marquee class="ribbon" behavior="scroll" direction="left" id="text2">4 hours ko po ito ginawa</marquee>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="bouncing-text" id="text3">pumipintig na po ugat ko sa ulo</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <marquee class="ribbon" behavior="scroll" direction="up" id="text4">sana maka-uno this sem</marquee>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <marquee class="ribbon" behavior="scroll" direction="down" id="text5">pls pls pls by sabrina carpenter po</marquee>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="bouncing-vertical" id="text6">regards, samantha chua</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="color-box bouncing-horizontal-box" id="text7">
+                <div class="ribbon">bye po</div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function pauseAnimations() {
+            document.querySelectorAll('marquee').forEach(marquee => marquee.stop());
+            document.querySelectorAll('.bouncing-text, .bouncing-vertical, .bouncing-horizontal-box').forEach(el => {
+                el.style.animationPlayState = 'paused';
+            });
+        }
+
+        function playAnimations() {
+            document.querySelectorAll('marquee').forEach(marquee => marquee.start());
+            document.querySelectorAll('.bouncing-text, .bouncing-vertical, .bouncing-horizontal-box').forEach(el => {
+                el.style.animationPlayState = 'running';
+            });
+        }
+    </script>
+</body>
+</html>
